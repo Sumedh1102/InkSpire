@@ -1,6 +1,6 @@
 import React from 'react'
 import { Search, PenTool } from "lucide-react"
-import {  Feather } from "lucide-react"
+import {  Edit3 } from "lucide-react"
 
 const filterButtons = ["TIPS", "RESOURCES", "GUIDES"]
 
@@ -24,10 +24,10 @@ const popularArticles = [
 
 const Slidecompo = () => {
   return (
-   <div className="w-auto bg-white p-6 grid grid-cols-1 gap-8 h-screen sticky top-0 overflow-y-auto">
+   <div className="hidden sm:grid w-auto bg-white p-6 grid-cols-1 gap-8 h-screen sticky top-0 overflow-y-auto ">
       {/* Brand Header */}
       <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-        <Feather className="h-8 w-8 text-gray-700" />
+        <Edit3 className="w-6 h-6 text-black" />
         <h1 className="text-2xl font-semibold text-gray-900">InkSpire X</h1>
       </div>
 

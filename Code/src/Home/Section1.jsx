@@ -4,22 +4,38 @@ import { useNavigate } from "react-router-dom";
 
 
 const navItems = [
-  { path: "/blogs1", link: "Subscribe" },
+  { path: "/blogs1", link: "blog1" },
+  { path: "/blogs2", link: "blog2" },
+  { path: "/blogs3", link: "blog3" },
+  { path: "/blogs4", link: "blog4" },
 ];
 
 const Section1 = () => {
 
   const navigate = useNavigate(); // <-- initialize navigate
 
-  const handleSubscribeClick = () => {
-    navigate(navItems[0].path); // navigates to "/services"
+  const handleblog1Click = () => {
+    navigate(navItems[0].path); // navigates to "/blog1"
   }; 
+
+  const handleblog2Click = () => {
+    navigate(navItems[1].path); // navigates to "/blog2"
+  };
+
+
+  const handleblog3Click = () => {
+    navigate(navItems[2].path); // navigates to "/blog3"
+  };
+
+  const handleblog4Click = () => {
+    navigate(navItems[3].path); // navigates to "/blog4"
+  };
   return (
      <div className="max-w-6xl mx-auto py-16">
   <div className="grid lg:grid-cols-[1.7fr_1fr]  gap-6 items-start">
     {/* Left Side - Featured Blog Card */}
     <div className="relative">
-      <button onClick={handleSubscribeClick} className='hover:-translate-y-1 transition duration-300'>
+      <button onClick={handleblog1Click} className='hover:-translate-y-1 transition duration-300'>
       <div
         className="relative h-96 lg:h-[525px] rounded-2xl overflow-hidden bg-cover bg-center"
         style={{
@@ -71,7 +87,7 @@ const Section1 = () => {
   {/* Blog links... */}
   <div className="space-y-3">
     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide font-nunito">Health</span>
-    <button className='hover:-translate-y-1 transition duration-300 '>
+    <button onClick={handleblog2Click} className='hover:-translate-y-1 transition duration-300 '>
     <h3 className="text-2xl font-semibold font-inter text-gray-900 leading-tight text-left ">
       Top 7 Habits To Boost Men’s Mental Health
     </h3>
@@ -81,7 +97,7 @@ const Section1 = () => {
 
   <div className="space-y-3">
     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide font-nunito">life</span>
-    <button className='hover:-translate-y-1 transition duration-300'>
+    <button onClick={handleblog3Click} className='hover:-translate-y-1 transition duration-300'>
     <h3 className="text-2xl font-semibold font-inter text-gray-900 leading-tight text-left">
       Mastering Work-Life Balance: Tips For Modern Men
     </h3>
@@ -91,7 +107,7 @@ const Section1 = () => {
 
   <div className="space-y-3">
     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide font-nunito">AI</span>
-    <button className='hover:-translate-y-1 transition duration-300 '>
+    <button onClick={handleblog4Click} className='hover:-translate-y-1 transition duration-300 '>
     <h3 className="text-2xl font-semibold font-inter text-gray-900 leading-tight text-left">
       AI and Healthcare: Transforming Men's Wellness
     </h3>

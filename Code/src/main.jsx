@@ -6,7 +6,9 @@ import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
 import BlogDetails from './components/BlogDetails.jsx'
 import Page1 from '../src/BlogContent/Page1.jsx'
-
+import Page2 from '../src/BlogContent/Page2.jsx'
+import Page3 from '../src/BlogContent/Page3.jsx'
+import Page4 from '../src/BlogContent/Page4.jsx'
 
 
 
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
     children:[
       {
        path : "/",
-       element : < Home />
+       element : < Home />,
       },
       {
       path : "/blogs",
@@ -46,7 +48,18 @@ const router = createBrowserRouter([
         path:"/blogs1",
         element:<Page1 />
       },
-
+      {
+        path:"/blogs2",
+        element: <Page2 />
+      },
+      {
+        path:"/blogs3",
+        element: <Page3 />
+      },
+      {
+        path:"/blogs4",
+        element: <Page4 />
+      },
   ]
   },
 ]);
